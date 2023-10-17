@@ -156,7 +156,6 @@ function renderCart() {
   totalElement.textContent = `£${totalPrice.toFixed(2)}`;
 }
 
-
 function addToCart(event) {
   const itemId = event.target.getAttribute('data-id');
   const item = state.items.find(item => item.id === itemId);
