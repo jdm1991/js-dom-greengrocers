@@ -90,7 +90,7 @@ for (let i = 0; i < items.length; i++){
   
   const div = document.createElement('div')
   div.setAttribute('class', 'store--item-icon')
-  displayItems.append(div)
+  listItems.append(div)
 
   const itemsImage = document.createElement('img')
   itemsImage.src = items[i].picture; 
@@ -104,8 +104,13 @@ for (let i = 0; i < items.length; i++){
     console.log('button clicked')
   })
 
+  if (items[i].clicked === false) {
+    items[i].clicked = true
+    const listOfItems = document.querySelector('.cart--item-list')
+    const addedItem = document.createElement('li')
+    listOfItems.append(addedItem)
+  }
 
 
 
-  
 }
